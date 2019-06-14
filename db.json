@@ -1,0 +1,173 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "password": "Bret123",
+      "role": "super",
+      "email": "Sincere@april.biz",
+      "address": {
+        "city": "Gwenborough",
+        "zipcode": "92998-3874"
+      },
+      "phone": "1-770-736-8031 x56442"
+    },
+    {
+      "id": 2,
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "password": "Ervin123",
+      "role": "guest",
+      "email": "Shanna@melissa.tv",
+      "address": {
+        "city": "Wisokyburgh",
+        "zipcode": "90566-7771"
+      },
+      "phone": "010-692-6593 x09125"
+    },
+    {
+      "id": 3,
+      "name": "Clementine Bauch",
+      "username": "Samantha",
+      "password": "Clementine123",
+      "role": "guest",
+      "email": "Nathan@yesenia.net",
+      "address": {
+        "city": "McKenziehaven",
+        "zipcode": "59590-4157"
+      },
+      "phone": "1-463-123-4447"
+    },
+    {
+      "id": 4,
+      "name": "Patricia Lebsack",
+      "username": "Karianne",
+      "password": "Patricia123",
+      "role": "guest",
+      "email": "Julianne.OConner@kory.org",
+      "address": {
+        "city": "South Elvis",
+        "zipcode": "53919-4257"
+      },
+      "phone": "493-170-9623 x156"
+    },
+    {
+      "id": 5,
+      "name": "Chelsey Dietrich",
+      "username": "Kamren",
+      "password": "Chelsey123",
+      "role": "guest",
+      "email": "Lucio_Hettinger@annie.ca",
+      "address": {
+        "city": "Roscoeview",
+        "zipcode": "33263"
+      },
+      "phone": "(254)954-1289"
+    },
+    {
+      "id": 6,
+      "name": "Mrs. Dennis Schulist",
+      "username": "Leopoldo_Corkery",
+      "password": "Dennis123",
+      "role": "guest",
+      "email": "Karley_Dach@jasper.info",
+      "address": {
+        "city": "South Christy",
+        "zipcode": "23505-1337"
+      },
+      "phone": "1-477-935-8478 x6430"
+    },
+    {
+      "id": 7,
+      "name": "Kurtis Weissnat",
+      "username": "Elwyn.Skiles",
+      "password": "Kurtis123",
+      "role": "guest",
+      "email": "Telly.Hoeger@billy.biz",
+      "address": {
+        "city": "Howemouth",
+        "zipcode": "58804-1099"
+      },
+      "phone": "210.067.6132"
+    },
+    {
+      "id": 8,
+      "name": "Nicholas Runolfsdottir V",
+      "username": "Maxime_Nienow",
+      "password": "Nicholas123",
+      "role": "guest",
+      "email": "Sherwood@rosamond.me",
+      "address": {
+        "city": "Aliyaview",
+        "zipcode": "45169"
+      },
+      "phone": "586.493.6943 x140"
+    },
+    {
+      "id": 9,
+      "name": "Glenna Reichert",
+      "username": "Delphine",
+      "password": "Glenna123",
+      "role": "guest",
+      "email": "Chaim_McDermott@dana.io",
+      "address": {
+        "city": "Bartholomebury",
+        "zipcode": "76495-3109"
+      },
+      "phone": "(775)976-6794 x41206"
+    },
+    {
+      "id": 12,
+      "name": "Aadel",
+      "password": "Aadel123",
+      "role": "super",
+      "address": {
+        "city": "San Diego",
+        "zipcode": "98107"
+      },
+      "email": "aadel@gmail.com",
+      "username": "aadel",
+      "phone": "67809876-10"
+    },
+    {
+      "id": 14,
+      "name": "Apeksha",
+      "role": "super",
+      "username": "apek",
+      "password": "apek123",
+      "email": "apeka@hotmal.com",
+      "phone": "123-567-0987",
+      "address": {
+        "city": "Mumbai",
+        "zipcode": "567"
+      }
+    },
+    {
+      "name": "Girish",
+      "role": "super",
+      "username": "girish",
+      "password": "girish123",
+      "email": "girish@gmail.com",
+      "phone": "876-1234",
+      "address": {
+        "city": "Shefield",
+        "zipcode": "1234557"
+      },
+      "id": 15
+    },
+    {
+      "name": "Jack",
+      "role": "guest",
+      "username": "jack",
+      "password": "kack123",
+      "email": "jack@hotmail.com",
+      "phone": "098-098-1234",
+      "address": {
+        "city": "Pune",
+        "zipcode": "411037"
+      },
+      "id": 16
+    }
+  ]
+}

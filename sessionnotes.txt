@@ -1,0 +1,335 @@
+Java Full Stack End
+
+	Front-end
+		UI
+		HTML , CSS , TS and Angular
+
+	Back-end
+		Web server (Java)
+		procesing data
+
+	MYSQL (DB)
+
+
+Angular 7
+ F/w build client side applications (HTML , CSS , JS / Typescript)
+
+Benefits:
+	a) Application has a clean structure
+	b) Incldue a re-usable code
+	c) Application more testable
+
+Installations:
+	Node JS
+	- JS envt to run JS outside the browser
+        - npm tool - Node Package Manager - install 3rd party dependencies
+
+	- Angular CLI - tool - to create application (npm install -g @angular/cli)
+
+	- Editor VSCode Editor
+
+	.npmrc (C:\Users\yv00487779)
+
+	proxy=http://yv00487779:pwd@tmchn1.techmahindra.com:8080
+
+Typescript:
+	Super set of JS. Valid JS code is also TS code
+	OOPs features
+	strong typing - optional
+	Compile time errors - understand
+	Intellisense
+
+	npm install -g typescript
+
+	** ES 5 (all browsers)
+	
+	ES2015
+	ES2016
+	ES2017
+
+	var and let
+	variable declarations
+	type assertions
+	Arrow fucntions
+	class (fields-properties, methods, constructor)
+	export
+	import
+
+	Modules
+	every file is treated as a module in TS
+	code base cleaner, reusble, maintain
+
+	Modules = Angular
+	in built and create custom
+	dividing the application into different functional units . Every unit is called as module
+	related and logical code is put together
+
+
+
+Creating an angular application:
+	- Install Cli
+
+	npm install @angular/cli -g
+
+	ng new dream-app
+
+	Application Flow (UI ) 
+		2 Types of Users
+		a) admin - super
+		b) guest
+
+	Mock server (json-server)
+
+	- Modules
+	- Componets
+        - directives
+	- Reactive Form validations
+        - services (http requests to end-points)
+	- Routing and navigation
+
+	Assignment:
+
+	Day 1: Practice Typescript
+		Install Angular CLI
+		create a project structure (dream-app)
+
+
+Building Blocks of an Ng appln
+
+a) Modules
+	Dividing the application into different functional units.
+	Functional Unit, has its logical and related code
+
+	i) Components - piece of UI (VIEW Component). pluggable and reusabale
+		
+		class (properties + methods) + @Decorator(Annotations) + Template (VIEW - HTML)
+
+		4 Files
+		 a) Compoent Class 
+		 b) Template (HTML)
+		 c) CSS . custom CSS for the component 	
+		 d) Unit test file
+
+
+
+		Render : one - way binding - interpolation {{ data }}
+			OR <img [src]="imgPath" />  Property binding
+
+		event binding ()
+		
+
+
+
+	ii) Services - class act as a Biz Logic . Consume End points
+						 ** share data between multiple components
+
+		** MVC ***
+		Component <=> Service 
+
+		** Dependency Injection ** ; f/w creates an instance of the service, make it available for 
+			the component
+			
+		** Singleton *** 
+
+		** SPA *** [Single Page Application]
+
+	iii) Directives - DOM manipulation and customize DOM
+		inbuilt and custom
+		
+		structural directives (*)
+		*ngFor
+
+		*ngIf , *ngSwitch
+
+	iv) Routing and navigation (Redirections)
+		
+
+	v) Pipes - formatting and transformations
+		built-in 
+			uppercase , lowercase, date, currency
+
+		custom pipes
+		
+	
+Web pack : Build Automation Tool
+
+		bundles the files
+
+		HMR (Hot Module Reload)
+
+Angular CLI:
+
+	1) Component
+		ng generate c list-users --skip-test
+
+	2) interface [custom type]
+		ng g i user
+
+	3) class
+		ng g cl user
+	
+	4) Building the project
+		ng build
+		generate a dist folder , that can be copied to prod
+
+	5) change a port number
+		ng serve --port 9000
+
+	6) Generate a service
+		ng g service user
+
+	Generate a pipe	
+	7) ng g p xyz
+		
+	8) creating a module
+	ng g m login
+
+	ng g c login/sign-up
+
+
+Day 2: Assignment:
+	Create the List-user component	
+	Revise the angular project structure
+	Application Flow
+
+
+
+Day 3:
+	Services
+
+	Routing:
+		navigating to different sections of the application
+
+		@angular/Router
+			Routes : array of Routes
+
+		Route objects : path and corresponding component
+		1) Configure the routes
+		2) Hyperlinks
+		3) <router-outlet> - placeholder to display the components
+
+	Headers and Footer components, inserted inside the root component
+	
+	Module Creation
+
+	Assignment
+	Explore Custom Pipe. (ex: create a custom pipe to sort the user names in asc order)
+
+
+Day 4:
+	2-way binding
+
+	- View and the component are always in sync
+	- @angular/forms : [(ngModel)] = 2-way binding. FormsModule
+	- imported into root module or the custom module
+	
+	Form Validations
+	      a) Template Driven	
+	      b) Reactive Driven Forms / Model Driven Forms
+		
+			Angular way of validations	 
+
+		@angular/forms : ReactiveFormsModule
+
+		classes:
+			i) FormBuilder ... create / construct / build UIs
+			ii) Validators ... validations
+			iii) FormGroup ... group the FormControl(s) (UI...Text boxes, Raio buttons
+				, Select Boxes,drop down lists)
+
+				FormControl(s) are UI objects
+
+
+	Angular Life cycle
+
+		Angular f/w is responsible for the Components life-cycle
+		Refer Diagram
+
+		OnInit<I>		ngOnInit()
+		OnChanges<I>		ngOnChanges()
+			invoked every time there is a change in one of the input properties
+			parent -> Child
+
+		OnDestroy()<I>		ngOnDestroy()
+		
+Assignment:
+	Reactive Driven Forms.
+	UI creation for the Add User
+
+
+
+Day 5:
+	Services
+		API : HTTP Protocol
+
+		a) service as a part of Module , its available to all the components...
+		b) service as a part of Component, its available only to that component...and its children
+
+	AuthenticationService : validate(email,password) {
+		RT  => User
+	}
+
+	a) json-server => mock server (json)
+		i) installed
+			npm install json-server --save
+		
+		Read a file (db.json). DB.
+
+		ii) start the server on port number 3000
+		    cmd> json-server --watch db.json
+			
+	
+	b) API calls
+		Async requests
+		old ways : JQuery, ajax
+
+		Abstraction: Promises
+
+				Observables   (RxJS : Reactive Extensions for JS: 3rd party library)
+				in-built in Ng F/w
+
+		
+		Observable => a) lazy collection / array of values over time
+			      b) When the data is available when you can subscribe to it
+
+			c) Every subscribe() call will have its own independent execution for 
+			   the web-API
+			d) subscribe() calls are not shared.	
+
+		Http Protocol : GET, POST, DELETE
+		Communication Protocol between the client and the server
+		
+		@angular/common/http  => HTTP Protocol API
+			HttpClientModule
+
+
+Day 6:
+	a) Add user by using HTTP post method to the db.json (json-server)
+
+	HttpClients work for consuming REST APis as well as it can intercept the request as well
+	
+	b) different HTTP methods
+	
+	c) Route parameters
+
+	d) Component Communication
+		Parent => Child
+
+			@Input() => decorator that passes data from the parent to the Child...
+			property
+
+		Child => Parent
+
+			@Output() => decorator that passes data from the child to the parent...
+			event binding
+			
+
+Assignment: Complete the edit functionality
+		
+		
+
+
+
+
+
+

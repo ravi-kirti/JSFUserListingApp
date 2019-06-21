@@ -8,11 +8,11 @@ import { EditUserComponent } from "./edit-user/edit-user.component";
 const routes: Routes = [
   // array of Route object, meant for navigation
   // mapping between the Urls and the components
-  { path: "", redirectTo: "/sign-in", pathMatch: "full" },
-  { path: "sign-in", component: SignInComponent },
-  { path: "list-user", component: ListUsersComponent },
-  { path: "add-user", component: AddUserComponent },
-  { path: "edit-user/:userid", component: EditUserComponent }
+  { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
+  { path: 'sign-in', component: SignInComponent },
+  { path: 'list-user', component: ListUsersComponent },
+  { path: 'add-user', component: AddUserComponent },
+  { path: 'edit-user/:userid', component: EditUserComponent }
 ];
 
 @NgModule({

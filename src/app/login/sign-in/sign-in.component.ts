@@ -11,8 +11,6 @@ import { User } from "../../user";
     providers: [AuthenticationService] // service is available to the component and its children
 })
 export class SignInComponent implements OnInit {
-    //email: string;
-    //password: string;
     imgUrl: string;
     loginForm: FormGroup; // entire form
     submitted: boolean;
@@ -20,29 +18,25 @@ export class SignInComponent implements OnInit {
     guestStatus: boolean;
     user: User;
 
-    // DI
     constructor(
         private fb: FormBuilder,
         private router: Router,
-        private _authService: AuthenticationService
+        private authService: AuthenticationService
     ) {
-        //this.email = "admin@gmail.com";
-        //this.password = "Admin123";
-
-        this.imgUrl = "../../assets/user.png";
+        this.imgUrl = '../../assets/user.png';
     }
 
     ngOnInit() {
         // initialize the component
         this.loginForm = this.fb.group({
             // creating a form , grouping all the form-controls together
-            email: ["", Validators.required],
-            password: ["", Validators.required]
+            email: ['', Validators.required],
+            password: ['', Validators.required]
         });
     }
 
     validate() {
-        //console.log(this.email + "  " + this.password);
+        // console.log(this.email + "  " + this.password);
         let useremail = this.loginForm.controls.email.value;
         let userpassword = this.loginForm.controls.password.value;
 
@@ -54,16 +48,16 @@ export class SignInComponent implements OnInit {
             return;
         }
 
-        this._authService
+        this.authService
             .validateByEmail(useremail, userpassword)
             .subscribe(response => {
-                console.log("**********" + response.name);
+                console.log('**********' + response.name);
                 this.user = response; // extracting the user object from the response
-                if (this.user != undefined && this.user != null) {
-                    //admin role -- super user
-                    if (this.user.rollname == "super") {
+                if (this.user !== undefined && this.user != null) {
+                    // admin role -- super user
+                    if (this.user.rollname === 'super') {
                         this.guestStatus = false;
-                        this.router.navigate(["list-user"]);
+                        this.router.navigate(['list-user']);
                     } else {
                         // guest user
                         this.guestStatus = true;

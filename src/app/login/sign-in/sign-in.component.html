@@ -20,14 +20,17 @@
       <div *ngIf="loginForm.controls.password.errors.required">Password is required...</div>
     </div>
     <button class="btn btn-primary  btn-block" type="submit" [disabled]="!f.valid">Sign In</button>
-    <div *ngIf="invalidLogin" style="color:red">
+    <!-- <div *ngIf="invalidLogin" style="color:red">
       Invalid Credentials
-    </div>
+    </div> -->
+    
+    <div *ngIf="invalidLogin" class="alert alert-danger">
+        <strong>Invalid Credentials!</strong> 
+      </div>
 
   </form>
   <br><br>
   <div *ngIf="guestStatus">
-
     <dream-display-user [userDetails]=user></dream-display-user>
   </div>
 </div>

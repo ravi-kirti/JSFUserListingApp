@@ -22,7 +22,7 @@ export class EditUserComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    let userid = this.route.snapshot.paramMap.get("userid");
+    let userid = this.route.snapshot.paramMap.get('userid');
     this.service.getUserById(userid).subscribe(response => {
       console.log(response);
       this.userDetail = response;
@@ -31,15 +31,15 @@ export class EditUserComponent implements OnInit {
     });
 
     this.userForm = this.fb.group({
-      id: [""],
-      name: ["", Validators.required],
-      rollname: ["", Validators.required],
-      username: ["", Validators.required],
-      password: ["", Validators.required],
-      email: ["", Validators.required],
-      phone: ["", Validators.required],
-      city: ["", Validators.required],
-      zipcode: ["", Validators.required]
+      id: [''],
+      name: ['', Validators.required],
+      rollname: ['', Validators.required],
+      username: ['', Validators.required],
+      password: ['', Validators.required],
+      email: ['', Validators.required],
+      phone: ['', Validators.required],
+      city: ['', Validators.required],
+      zipcode: ['', Validators.required]
     });
   }
 
@@ -49,7 +49,7 @@ export class EditUserComponent implements OnInit {
       return;
     }
     this.service.updateUser(this.userForm.value).subscribe(data => {
-      this.router.navigate(["list-user"]);
+      this.router.navigate(['list-user']);
     });
   }
 }

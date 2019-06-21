@@ -16,19 +16,19 @@ export class AddUserComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private _serv: UserService
+    private userService: UserService
   ) {}
 
   ngOnInit() {
     this.userForm = this.fb.group({
-      name: ["", Validators.required],
-      rollname: ["", Validators.required],
-      username: ["", Validators.required],
-      password: ["", Validators.required],
-      email: ["", Validators.required],
-      phone: ["", Validators.required],
-      city: ["", Validators.required],
-      zipcode: ["", Validators.required]
+      name: ['', Validators.required],
+      rollname: ['', Validators.required],
+      username: ['', Validators.required],
+      password: ['', Validators.required],
+      email: ['', Validators.required],
+      phone: ['', Validators.required],
+      city: ['', Validators.required],
+      zipcode: ['', Validators.required]
     });
   }
 
@@ -39,9 +39,9 @@ export class AddUserComponent implements OnInit {
     }
     // form entries are valid....
     // insert at db.json file
-    this._serv.adUser(this.userForm.value).subscribe(response => {
+    this.userService.adUser(this.userForm.value).subscribe(response => {
       // after adding user navigate back to the list-users page
-      this.router.navigate(["list-user"]);
+      this.router.navigate(['list-user']);
     });
   }
 }
